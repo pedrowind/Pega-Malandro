@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+
+   <title>Tabuada de 7</title>
+   <style>
+       th, td {
+         border: 1px solid blue;
+       }
+
+       hr {
+         border: 10px dotted gray;
+       }
+
+       h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        color: green;
+       }
+   </style>
+</head>
+<body>
+   <h1>Tabuada de 7</h1>
+   <hr/>
+   <table>
+       <tr><th>Cálculos</th></tr>
+       {{ tab | safe}}
+   </table>
+</body>
+</html>
