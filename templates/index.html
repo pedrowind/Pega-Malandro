@@ -2,31 +2,16 @@
 <html lang="pt-br">
 <head>
    <meta charset="UTF-8">
-   <title>Imprimir Nome</title>
-   <style>
-    input[type=submit] {
-        background-color: cornflowerblue;
-        font-size: 16px;
-        font-weight: bold;
-        padding: 15px;
-        color: white;
-        border-radius: 15px;
-    }
-</style>
+   <title>Menu do CRUD</title>
+   <link rel="stylesheet" href="/static/crud.css">
 </head>
 <body>
-   <form action="/nomes" method="post">
-       <p>
-           Qual o nome?
-           <input type="text" name="nome"/>
-       </p>
-       <p>
-           Quantas vezes imprimir?
-           <input type="number" name="vezes"/>
-       </p>
-       <p>
-           <input type="submit"  value="Imprimir"/>
-       </p>
-   </form>
+<h1>Gestão de Clientes</h1>
+<hr>
+<ul class="menu">
+   <li><a href="/inc_form">Inclusão</a></li>
+   <li><a href="/consulta">Consulta</a></li>
+   <li><a href="/escolha">Atualização</a></li>
+</ul>
 </body>
 </html>
