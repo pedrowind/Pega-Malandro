@@ -1,14 +1,8 @@
 import mysql.connector
 
-
-
-
 class SQL:
    def __init__(self, servidor='localhost', usr='root', pwd='ceub123456', esquema='test'):
-       self.cnx = mysql.connector.connect(host=servidor,
-                                          user=usr,
-                                          password=pwd,
-                                          database=esquema)
+       self.cnx = mysql.connector.connect(host=servidor,user=usr,password=pwd,database=esquema)
 
 
    def insert(self, comando, params=[]):
@@ -104,4 +98,3 @@ class SQL:
            list.append(dic)
        cs.close()
        return list
-
