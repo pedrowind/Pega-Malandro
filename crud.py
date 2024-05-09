@@ -10,14 +10,9 @@ def index():
 if __name__ == '__main__':
    app.run(debug=1)
 
-
-
 @app.route('/inc_form')
 def inc_form():
    return render_template('inc_form.html')
-
-
-
 
 @app.route('/inclusao', methods=['POST'])
 def inclusao():
