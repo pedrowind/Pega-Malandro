@@ -7,9 +7,6 @@ app = Flask(__name__)
 def index():
    return render_template('index.html')
 
-if __name__ == '__main__':
-   app.run(debug=1)
-
 @app.route('/inc_form')
 def inc_form():
    return render_template('inc_form.html')
@@ -86,3 +83,6 @@ def exclusao():
 
 
    return render_template('exclusao.html', num=num)
+
+if __name__ == '__main__':
+   app.run(debug=1)
