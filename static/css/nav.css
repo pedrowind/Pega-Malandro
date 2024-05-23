@@ -1,0 +1,44 @@
+header {
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center;
+    color: white;
+}
+
+nav a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+    margin: auto;
+}
+
+nav .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+nav .logo img{
+    width: 75px;
+    height: 75px;
+}
+
+nav .links{
+    display: flex;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 70px;
+    height: 30px;
+    align-items: center;
+}
