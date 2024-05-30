@@ -1,0 +1,241 @@
+:root {
+  --text-color: hsl(30, 67%, 94%);
+  --text-color-light: hsl(30, 100%, 100%);
+  --text-color-dark: hsl(208, 70%, 5%);
+
+  --shadow-color: hsl(223, 95%, 7%, 0.5);
+
+  --background-color-blue: hsl(208, 40%, 35%);
+  --background-color-blue-light: hsl(208, 40%, 38%);
+  --background-color-blue-lighter: hsl(208, 40%, 45%);
+  --background-color-logo-blue: hsl(223, 95%, 7%);
+  --background-color-white: hsl(0, 0%, 100%);
+  --background-color-whitesmoke: hsl(0, 0%, 96%);
+
+  --background-color-red_pink: hsl(341, 100%, 53%);
+  --background-color-red_pink-light: hsl(341, 100%, 60%);
+
+  --font-family-text: Raleway, sans-serif;
+  --font-family-text2: Baskervville, serif;
+  --font-family-title: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --font-family-logo: "tilt neon", Anton;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-text);
+
+  overflow-x: hidden;
+
+  color: var(--text-color-dark);
+  background-color: var(--background-color-whitesmoke);
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.brand-name {
+  font-family: var(--font-family-logo);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  margin-left: 1.5rem;
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+
+  margin-right: 0.7rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100vw;
+
+  height: 7rem;
+
+  color: var(--text-color-light);
+  background-color: var(--background-color-logo-blue);
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  list-style: none;
+
+  width: clamp(30vw, 35vw, 40vw);
+  margin-right: 1.5rem;
+}
+
+.nav-bar li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 6.5rem;
+  height: 3.5rem;
+
+  border-radius: 10px;
+
+  font-size: 1.2rem;
+
+  color: var(--text-color-dark);
+  background-color: var(--background-color-white);
+}
+
+.nav-bar li a:visited {
+  color: var(--text-color-dark);
+}
+
+.nav-bar li a:focus {
+  color: var(--text-color-dark);
+}
+.nav-bar li a:active {
+  color: var(--text-color-dark);
+}
+
+.nav-bar li {
+  transition: 120ms ease-in-out;
+}
+
+.nav-bar li:hover {
+  transform: translateY(-3px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+
+  width: 100vw;
+
+  height: 7rem;
+
+  padding-right: 2.5rem;
+
+  margin-top: 30px;
+
+  font-family: var(--font-family-text2);
+
+  background-color: var(--background-color-logo-blue);
+}
+
+.footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  width: 14rem;
+
+  list-style: none;
+}
+
+.footer ul li,
+.footer span {
+  margin: 0.5rem;
+
+  color: var(--text-color);
+}
+
+.main-text {
+  text-align: center;
+
+  width: 55%;
+
+  margin: auto;
+  margin-top: 10px;
+
+  padding: 20px;
+
+  border-radius: 5px;
+
+  background-color: var(--background-color-white);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem 1rem;
+
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 20rem;
+  height: 20rem;
+
+  margin: auto;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow-color);
+
+  background-color: var(--background-color-white);
+
+  transition: 130ms ease-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  margin: auto;
+
+  border-radius: 10px 10px 0 0;
+
+  background-color: var(--background-color-white);
+}
+
+.card-icon img {
+  width: 9rem;
+  height: 9rem;
+}
+
+.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 20%;
+
+  margin-top: 10px;
+
+  border-radius: 0 0 10px 10px;
+
+  color: var(--text-color-light);
+  background-color: var(--background-color-logo-blue);
+}
