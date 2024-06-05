@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Consulta</title>
+        <link rel='stylesheet' href='/static/style.css'>
+    </head>
+    <body>
+        <h1>Consulta - Mostra todos os Países</h1>
+        <hr>
+        <div>
+            <table class='listagem'>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nome</th>
+                </tr>
+                {% for pais in lista %}
+                    <tr>
+                        <td>{{ pais['identificador_pais'] }}</td>
+                        <td>{{ pais['nome_pais'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+        [ <a href='/'> Retornar ao Menu</a> ]
+    </body>
+</html>

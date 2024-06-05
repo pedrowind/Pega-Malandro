@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Formulário de Atualização</title>
+        <link rel='stylesheet' href='/static/style.css'>
+    </head>
+    <body>
+        <h1>Atualização - Formulário de Atualização de Dados</h1>
+        <hr>
+        <div>
+            <form action='/atualizacao_pais' method='post'>
+                <table>
+                    <tr>
+                        <td>Identificador:</td>
+                        <td>
+                            <label>
+                                <input type='text' size='5' maxlength='5' name='identificador_pais' value='{{ identificador_pais }}' readonly>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nome:</td>
+                        <td>
+                            <label>
+                                <input type='text' size='46' maxlength='46' name='nome_pais' value='{{ nome_pais }}' required>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <input type='submit' value='Atualizar País'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        [ <a href='/'> Retornar ao Menu</a> ]
+    </body>
+</html>
