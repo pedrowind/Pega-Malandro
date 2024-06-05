@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from sql.banco import SQL
+from banco import SQL
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["GET"])
 def login():
     return render_template("login.html")
 
