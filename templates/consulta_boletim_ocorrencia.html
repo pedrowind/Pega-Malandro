@@ -6,18 +6,20 @@
         <link rel='stylesheet' href='/static/style.css'>
     </head>
     <body>
-        <h1>Consulta - Mostra todos os Países</h1>
+        <h1>Consulta - Mostra todos os Boletins de Ocorrências</h1>
         <hr>
         <div>
             <table class='listagem'>
                 <tr>
                     <th>Identificador</th>
                     <th>Nome</th>
+                    <th>Código</th>
                 </tr>
-                {% for pais in lista %}
+                {% for boletim_ocorrencia in lista %}
                     <tr>
-                        <td>{{ pais['identificador_pais'] }}</td>
-                        <td>{{ pais['nome_pais'] }}</td>
+                        <td>{{ boletim_ocorrencia['identificador_boletim_ocorrencia'] }}</td>
+                        <td>{{ boletim_ocorrencia['nome_boletim_ocorrencia'] }}</td>
+                        <td>{{ boletim_ocorrencia['codigo_usuario'] }}</td>
                     </tr>
                 {% endfor %}
             </table>

@@ -6,24 +6,22 @@
         <link rel='stylesheet' href='/static/style.css'>
     </head>
     <body>
-        <h1>Atualização - Escolha um Estado para Atualizar</h1>
+        <h1>Atualização - Escolha um Usuário para Atualizar</h1>
         <hr>
         <div>
             <table class='listagem'>
                 <tr>
                     <th>Identificador</th>
                     <th>Nome</th>
-                    <th>Código</th>
                     <th>Atualizar?</th>
                 </tr>
-                {% for estado in lista %}
+                {% for usuario in lista %}
                     <tr>
-                        <td>{{ estado.identificador_estado }}</td>
-                        <td>{{ estado.nome_estado }}</td>
-                        <td>{{ estado.codigo_pais }}</td>
+                        <td>{{ usuario.identificador_usuario }}</td>
+                        <td>{{ usuario.nome_usuario }}</td>
                         <td>
-                            <button onclick='atualizar({{ estado.identificador_estado }})'>Atualizar</button>
-                            <button onclick='deletar({{ estado.identificador_estado }}, "{{ estado.nome_estado }}")'>Deletar</button>
+                            <button onclick='atualizar({{ usuario.identificador_usuario }})'>Atualizar</button>
+                            <button onclick='deletar({{ usuario.identificador_usuario }}, "{{ usuario.nome_usuario }}")'>Deletar</button>
                         </td>
                     </tr>
                 {% endfor %}
@@ -35,12 +33,12 @@
 </html>
 <script>
     function atualizar(identificador) {
-        window.open('/formulario_atualizacao_estado?identificador=' + identificador, '_SELF');
+        window.open('/formulario_atualizacao_usuario?identificador=' + identificador, '_SELF');
     }
 
     function deletar(identificador, nome) {
         if (confirm('Deseja Realmente Deletar ' + nome + '?')) {
-            window.open('/delecao_estado?identificador=' + identificador, '_SELF');
+            window.open('/delecao_usuario?identificador=' + identificador, '_SELF');
         }
     }
 </script>

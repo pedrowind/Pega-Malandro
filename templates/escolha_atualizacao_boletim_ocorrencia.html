@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Escolher para Atualizar</title>
+        <link rel='stylesheet' href='/static/style.css'>
+    </head>
+    <body>
+        <h1>Atualização - Escolha um Boletim de Ocorrência para Atualizar</h1>
+        <hr>
+        <div>
+            <table class='listagem'>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Atualizar?</th>
+                </tr>
+                {% for boletim_ocorrencia in lista %}
+                    <tr>
+                        <td>{{ boletim_ocorrencia.identificador_boletim_ocorrencia }}</td>
+                        <td>{{ boletim_ocorrencia.nome_boletim_ocorrencia }}</td>
+                        <td>{{ boletim_ocorrencia.codigo_usuario }}</td>
+                        <td>
+                            <button onclick='atualizar({{ boletim_ocorrencia.identificador_boletim_ocorrencia }})'>Atualizar</button>
+                            <button onclick='deletar({{ boletim_ocorrencia.identificador_boletim_ocorrencia }}, "{{ boletim_ocorrencia.nome_boletim_ocorrencia }}")'>Deletar</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <br>
+        [ <a href='/'> Retornar ao Menu</a> ]
+    </body>
+</html>
+<script>
+    function atualizar(identificador) {
+        window.open('/formulario_atualizacao_boletim_ocorrencia?identificador=' + identificador, '_SELF');
+    }
+
+    function deletar(identificador, nome) {
+        if (confirm('Deseja Realmente Deletar ' + nome + '?')) {
+            window.open('/delecao_boletim_ocorrencia?identificador=' + identificador, '_SELF');
+        }
+    }
+</script>

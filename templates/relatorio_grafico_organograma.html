@@ -18,10 +18,10 @@
                     [{ v: 'planeta', f: 'Planeta Terra<div style="color: red; font-style: italic">Planeta</div>' }, '', 'O Planeta']
 
                     {% for dado in dados %}
-                        , [{ v: 'pais_{{ dado.identificador_pais }}', f: '{{ dado.nome_pais }}<div style="color: red; font-style: italic">País</div>' }, 'planeta', 'O País']
+                        , [{ v: 'usuario_{{ dado.identificador_usuario }}', f: '{{ dado.nome_usuario }}<div style="color: red; font-style: italic">Usuário</div>' }, 'planeta', 'O Usuário']
 
-                        {% for estado in dado.estados %}
-                            , [{ v:'estado_{{ estado.identificador_estado }}', f: '{{ estado.nome_estado }}<div style="color: red; font-style: italic">Estado</div>' }, 'pais_{{ dado.identificador_pais }}', 'O Estado']
+                        {% for boletim_ocorrencia in dado.boletim_ocorrencias %}
+                            , [{ v:'boletim_ocorrencia_{{ boletim_ocorrencia.identificador_boletim_ocorrencia }}', f: '{{ boletim_ocorrencia.nome_boletim_ocorrencia }}<div style="color: red; font-style: italic">boletim_ocorrencia</div>' }, 'usuario_{{ dado.identificador_usuario }}', 'O boletim_ocorrencia']
                         {% endfor %}
                     {% endfor %}
                 ]);

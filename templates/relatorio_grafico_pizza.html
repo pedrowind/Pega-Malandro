@@ -10,13 +10,13 @@
 
             function renderizarGrafico() {
                 var dados = google.visualization.arrayToDataTable([
-                    ['País', 'Quantidade de Estados']
+                    ['Usuário', 'Quantidade de boletim_ocorrencias']
                     {% for dado in dados %}
-                        , ['{{ dado.nome_pais }}', {{ dado.quantidade_estados }}]
+                        , ['{{ dado.nome_usuario }}', {{ dado.quantidade_boletim_ocorrencias }}]
                     {% endfor %}
                 ]);
 
-                var opcoes = { title: 'Gráfico de Pizza dos Países e das Quantidades de Estados' };
+                var opcoes = { title: 'Gráfico de Pizza dos Usuários e das Quantidades de boletim_ocorrencias' };
 
                 var grafico = new google.visualization.PieChart(document.getElementById('grafico_pizza'));
                 grafico.draw(dados, opcoes);
