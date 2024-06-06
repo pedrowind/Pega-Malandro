@@ -7,16 +7,21 @@ from src.routes.relatorio_grafico import modulo_relatorio_grafico
 
 load_dotenv()
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 aplicacao = Flask(__name__)
-aplicacao.config['SECRET_KEY'] = SECRET_KEY
+aplicacao.config["SECRET_KEY"] = SECRET_KEY
 
 
-@aplicacao.route('/')
+@aplicacao.route("/")
 def formulario_index():
-    return render_template('index.html')
+    return render_template("index.html")
+
+
+@aplicacao.route("/login")
+def formulario_login():
+    return render_template("login.html")
 
 
 aplicacao.register_blueprint(modulo_usuario)
@@ -24,5 +29,5 @@ aplicacao.register_blueprint(modulo_boletim_ocorrencia)
 aplicacao.register_blueprint(modulo_relatorio_grafico)
 
 
-if __name__ == '__main__':
-    aplicacao.run()
+if __name__ == "__main__":
+    aplicacao.run(debug=True)
