@@ -19,7 +19,7 @@ def relatorio_grafico_pizza():
     comando = '''
         SELECT
             tabela_usuario.nome_usuario,
-            COUNT(tabela_boletim_ocorrencia.identificador_boletim_ocorrencia) AS quantidade_boletim_ocorrencias
+            COUNT(tabela_boletim_ocorrencia.identificador_boletim_ocorrencia) AS quantidade_boletins_ocorrencia
         FROM tabela_usuario
         JOIN tabela_boletim_ocorrencia ON tabela_usuario.identificador_usuario = tabela_boletim_ocorrencia.codigo_usuario
         GROUP BY tabela_usuario.nome_usuario;
@@ -49,7 +49,7 @@ def relatorio_grafico_organograma():
         ORDER BY nome_boletim_ocorrencia;
     '''
     for usuario in lista_usuarios:
-        usuario['boletim_ocorrencias'] = repositorio.pegar_lista(comando_boletim_ocorrencia, [usuario['identificador_usuario']])
+        usuario['boletins_ocorrencia'] = repositorio.pegar_lista(comando_boletim_ocorrencia, [usuario['identificador_usuario']])
 
     return render_template('relatorio_grafico_organograma.html', dados=lista_usuarios)
 

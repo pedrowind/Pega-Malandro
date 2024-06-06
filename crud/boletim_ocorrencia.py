@@ -22,7 +22,7 @@ def insercao_boletim_ocorrencia():
     '''
     identificador = repositorio.inserir(comando, [nome, codigo])
 
-    return render_template('insercao_boletim_ocorrencia.html', identificador=identificador)
+    return render_template('resultado_insercao_boletim_ocorrencia.html', identificador=identificador)
 
 
 @modulo_boletim_ocorrencia.route('/consulta_boletim_ocorrencia')
@@ -85,7 +85,7 @@ def atualizacao_boletim_ocorrencia():
     '''
     numero_linhas = repositorio.atualizar_deletar(comando, [nome, codigo, identificador])
 
-    return render_template('atualizacao_boletim_ocorrencia.html', numero_linhas=numero_linhas)
+    return render_template('resultado_atualizacao_boletim_ocorrencia.html', numero_linhas=numero_linhas)
 
 
 @modulo_boletim_ocorrencia.route('/delecao_boletim_ocorrencia', methods=['GET'])
@@ -98,4 +98,4 @@ def delecao_boletim_ocorrencia():
     '''
     numero_linhas = repositorio.atualizar_deletar(comando, [request.args.get('identificador')])
 
-    return render_template('delecao_boletim_ocorrencia.html', numero_linhas=numero_linhas)
+    return render_template('resultado_delecao_boletim_ocorrencia.html', numero_linhas=numero_linhas)

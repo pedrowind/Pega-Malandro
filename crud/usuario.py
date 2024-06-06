@@ -21,7 +21,7 @@ def insercao_usuario():
     '''
     identificador = repositorio.inserir(comando, [nome])
 
-    return render_template('insercao_usuario.html', identificador=identificador)
+    return render_template('resultado_insercao_usuario.html', identificador=identificador)
 
 
 @modulo_usuario.route('/consulta_usuario')
@@ -80,7 +80,7 @@ def atualizacao_usuario():
     '''
     numero_linhas = repositorio.atualizar_deletar(comando, [nome, identificador])
 
-    return render_template('atualizacao_usuario.html', numero_linhas=numero_linhas)
+    return render_template('resultado_atualizacao_usuario.html', numero_linhas=numero_linhas)
 
 
 @modulo_usuario.route('/delecao_usuario', methods=['GET'])
@@ -97,4 +97,4 @@ def delecao_usuario():
     except Exception as erro:
         return render_template('erro_relacionamento_usuario_boletim_ocorrencia.html', erro=erro)
     else:
-        return render_template('delecao_usuario.html', numero_linhas=numero_linhas)
+        return render_template('resultado_delecao_usuario.html', numero_linhas=numero_linhas)
