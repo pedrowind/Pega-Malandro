@@ -1,8 +1,18 @@
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+SERVIDOR = os.environ.get('SERVIDOR')
+USUARIO = os.environ.get('USUARIO')
+SENHA = os.environ.get('SENHA')
+BANCO_DADOS = os.environ.get('BANCO_DADOS')
 
 
 class Repositorio:
-    def __init__(self, servidor='SERVIDOR', usuario='USUARIO', senha='SENHA', banco_dados='BANCO_DADOS'):
+    def __init__(self, servidor='SERVIDOR', usuario=USUARIO, senha=SENHA, banco_dados=BANCO_DADOS):
         self.conexao = mysql.connector.connect(host=servidor, user=usuario, password=senha, database=banco_dados)
 
     def inserir(self, comando, parametros):
