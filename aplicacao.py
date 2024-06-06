@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from servidor.repositorio import Repositorio
 from crud.usuario import modulo_usuario
 from crud.boletim_ocorrencia import modulo_boletim_ocorrencia
 from crud.relatorio_grafico import modulo_relatorio_grafico
