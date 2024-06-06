@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from server.repositorio import Repositorio
+from src.server.repositorio import Repositorio
 
 
 modulo_boletim_ocorrencia = Blueprint('modulo_boletim_ocorrencia', __name__)

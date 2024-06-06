@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from server.repositorio import Repositorio
+from src.server.repositorio import Repositorio
 
 
 modulo_usuario = Blueprint('modulo_usuario', __name__)

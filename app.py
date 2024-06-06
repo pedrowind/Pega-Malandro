@@ -1,10 +1,17 @@
 from flask import Flask, render_template
-from routes.usuario import modulo_usuario
-from routes.boletim_ocorrencia import modulo_boletim_ocorrencia
-from routes.relatorio_grafico import modulo_relatorio_grafico
+from dotenv import load_dotenv
+import os
+from src.routes.usuario import modulo_usuario
+from src.routes.boletim_ocorrencia import modulo_boletim_ocorrencia
+from src.routes.relatorio_grafico import modulo_relatorio_grafico
+
+load_dotenv()
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 aplicacao = Flask(__name__)
+aplicacao.config['SECRET_KEY'] = SECRET_KEY
 
 
 @aplicacao.route('/')

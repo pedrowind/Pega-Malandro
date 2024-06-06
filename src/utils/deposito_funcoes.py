@@ -1,4 +1,4 @@
-from server.repositorio import Repositorio
+from src.server.repositorio import Repositorio
 import random
 import string
 

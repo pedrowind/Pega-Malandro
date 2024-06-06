@@ -1,11 +1,8 @@
 from flask import Blueprint, render_template, request, session
-from utils.deposito_funcoes import Deposito_Funcoes
+from src.utils.deposito_funcoes import Deposito_Funcoes
 
 
 modulo_login = Blueprint('modulo_login', __name__)
-modulo_login.config['SECRET_KEY'] = 'SECRET_KEY_VERY_MUCH_BIG_AND_STRONG'
-
-
 deposito_funcoes = Deposito_Funcoes()
 
 
