@@ -2,7 +2,7 @@ import mysql.connector
 
 
 class Repositorio:
-    def __init__(self, servidor='localhost', usuario='root', senha='ceub123456', banco_dados='pega_malandro'):
+    def __init__(self, servidor='SERVIDOR', usuario='USUARIO', senha='SENHA', banco_dados='BANCO_DADOS'):
         self.conexao = mysql.connector.connect(host=servidor, user=usuario, password=senha, database=banco_dados)
 
     def inserir(self, comando, parametros):
@@ -48,7 +48,7 @@ class Repositorio:
         cursor = self.conexao.cursor()
         cursor.execute(comando, parametros)
         data = cursor.fetchone()[0]
-        resultado = str(data.day).zfill(2) + "/" + str(data.month).zfill(2) + "/" + str(data.year)
+        resultado = str(data.day).zfill(2) + '/' + str(data.month).zfill(2) + '/' + str(data.year)
 
         cursor.close()
         return resultado
