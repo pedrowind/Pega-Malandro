@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+    <form action='/alterar_senha' method='post'>
+        <table>
+            <tr>
+                <td>Digite Sua Senha Atual</td>
+                <td>
+                    <input type='password' name='senha_atual' id='senha_atual'>
+                </td>
+            </tr>
+            <tr>
+                <td>Digite Sua Nova Senha</td>
+                <td>
+                    <input type='password' name='nova_senha' id='nova_senha'>
+                </td>
+            </tr>
+            <tr>
+                <td>Confirme Sua Nova Senha</td>
+                <td>
+                    <input type='password' name='confirmar_senha' id='confirmar_senha'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'>     
+                    <button type='submit'>Alterar a Senha</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
+
+{% block msg %}
+    {{ msg }}
+{% endblock %}

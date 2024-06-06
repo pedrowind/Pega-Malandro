@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from servidor.repositorio import Repositorio
+from server.repositorio import Repositorio
 
 
 modulo_relatorio_grafico = Blueprint('modulo_relatorio_grafico', __name__)

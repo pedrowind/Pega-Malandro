@@ -1,7 +1,7 @@
 from flask import Flask, render_template
-from crud.usuario import modulo_usuario
-from crud.boletim_ocorrencia import modulo_boletim_ocorrencia
-from crud.relatorio_grafico import modulo_relatorio_grafico
+from routes.usuario import modulo_usuario
+from routes.boletim_ocorrencia import modulo_boletim_ocorrencia
+from routes.relatorio_grafico import modulo_relatorio_grafico
 
 
 aplicacao = Flask(__name__)
