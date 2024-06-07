@@ -18,7 +18,16 @@ aplicacao.config["SECRET_KEY"] = SECRET_KEY
 
 @aplicacao.route("/")
 def formulario_index():
+<<<<<<< HEAD
     return redirect(url_for('modulo_login.login'))
+=======
+    return render_template("index.html")
+
+
+@aplicacao.route("/login")
+def formulario_login():
+    return render_template("login.html")
+>>>>>>> 4d49e44963dfa437437e7900a7d79e86433ec06b
 
 
 aplicacao.register_blueprint(modulo_login)
