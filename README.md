@@ -9,7 +9,7 @@ Desenvolvemos uma aplicação para gerenciamento de ocorrencias policiais. Temos
 
 ## 🛠️ Construído com
 
-<img src="https://www.svgrepo.com/show/376344/python.svg">
+<img src="https://www.svgrepo.com/show/376344/python.svg" width="50px">
 
 
 ## ✒️ Autores
