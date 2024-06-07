@@ -9,7 +9,7 @@ Desenvolvemos uma aplicação para gerenciamento de ocorrencias policiais. Temos
 
 ## 🛠️ Construído com
 
-<img src="https://www.svgrepo.com/show/376344/python.svg" width="50px">
+<img src="https://www.svgrepo.com/show/376344/python.svg" width="50px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png" width="50px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1024px-CSS3_logo.svg.png" width="50px"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" width="50px">
 
 
 ## ✒️ Autores
