@@ -11,9 +11,7 @@ Desenvolvemos uma aplicação para gerenciamento de ocorrencias policiais. Temos
 
 Linguagens usadas para desenvolver a aplicação
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+<img src=" https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" width="50px">
 
 
 ## ✒️ Autores
