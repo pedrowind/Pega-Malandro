@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+    <link rel="stylesheet" href="/static/css/cadastro-usuario.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+
+        <h1 class="brand-name">Pega Malandro</h1>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="/">Voltar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form action="/cadastro" method="post">
+        <div class="logo">
+          <img
+            src="/static/imagens/PegaMalandroLogo.jpg"
+            alt="imagem do usuario"
+            id="image"
+          />
+
+          <h1 class="brand-name">Pega Malandro</h1>
+        </div>
+        <div class="form-container">
+          <input required type="file" accept="image/*" id="user_image" /><br />
+        </div>
+
+        <div class="form-container">
+          <input required type="text" placeholder="Nome:" />
+          <input required type="text" placeholder="Sobrenome:" />
+        </div>
+
+        <div class="form-container">
+          <input required type="number" placeholder="CPF:" />
+          <input required type="text" placeholder="Local de Nascimento:" />
+          <label for="data_nasc"></label>
+          <input
+            required
+            type="date"
+            placeholder="Data de Nascimento:"
+            id="data_nasc"
+          />
+        </div>
+
+        <div class="form-container">
+          <input required type="number" placeholder="CEP:" />
+          <input required type="text" placeholder="Endereço:" />
+        </div>
+
+        <div class="form-container">
+          <input required type="email" placeholder="Email:" />
+          <input required type="password" placeholder="Telefone:" />
+        </div>
+
+        <div class="form-container">
+          <input required type="password" placeholder="Senha:" />
+          <input required type="password" placeholder="Confirmar senha:" />
+        </div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <a href=""><li>Privacy</li></a>
+        <a href=""><li>Terms</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+      <span>Copyright 2024</span>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("user_image").onchange = function () {
+      var src = URL.createObjectURL(this.files[0]);
+      document.getElementById("image").src = src;
+    };
+  </script>
+</html>

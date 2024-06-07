@@ -24,6 +24,11 @@ def formulario_login():
     return render_template("login.html")
 
 
+@aplicacao.route("/cadastrar")
+def formulario_cadastrar():
+    return render_template("cadastro_usuario.html")
+
+
 aplicacao.register_blueprint(modulo_usuario)
 aplicacao.register_blueprint(modulo_boletim_ocorrencia)
 aplicacao.register_blueprint(modulo_relatorio_grafico)
