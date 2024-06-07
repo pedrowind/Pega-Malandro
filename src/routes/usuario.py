@@ -1,27 +1,35 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, redirect, url_for
 from src.server.repositorio import Repositorio
 
 
 modulo_usuario = Blueprint('modulo_usuario', __name__)
 
 
-@modulo_usuario.route('/formulario_insercao_usuario')
-def formulario_insercao_usuario():
-    return render_template('formulario_insercao_usuario.html')
+@modulo_usuario.route('/cadastro')
+def cadastro():
+    return render_template('cadastro.html')
 
 
-@modulo_usuario.route('/insercao_usuario', methods=['POST'])
-def insercao_usuario():
-    nome = request.form['nome_usuario']
+@modulo_usuario.route('/inserir_usuario', methods=['POST'])
+def inserir_usuario():
     repositorio = Repositorio()
 
-    comando = '''
-        INSERT INTO tabela_usuario(nome_usuario)
-        VALUES (%s)
-    '''
-    identificador = repositorio.inserir(comando, [nome])
+    nome = request.form['nome_usuario']
+    email = request.form['email_usuario']
+    senha = request.form['senha_usuario']
+    confirmar_senha = request.form['confirmar_senha_usuario']
 
-    return render_template('resultado_insercao_usuario.html', identificador=identificador)
+    erro = 'Senhas não conferem!'
+    if senha != confirmar_senha:
+        return erro
+
+    comando = '''
+        INSERT INTO tabela_usuario(nome_usuario, email_usuario, senha_usuario, perfil_usuario)
+        VALUES (%s, %s, SHA(%s), 'C')
+    '''
+    repositorio.inserir(comando, [nome, email, senha])
+
+    return render_template('resultado_inserir_usuario.html')
 
 
 @modulo_usuario.route('/consulta_usuario')
