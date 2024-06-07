@@ -1,52 +1,151 @@
 <!DOCTYPE html>
-<html lang='pt-BR'>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Menu de Cadastro dos Usuários e Boletins de Ocorrência</title>
-        <link rel='stylesheet' href='../static/style.css'>
-    </head>
-    <body>
-        <section>
-            <h1>Gestão de Usuários</h1>
-            <hr>
-            <ul class='menu'>
-                <li>
-                    <a href='/formulario_insercao_usuario'>Inclusão de Usuário</a>
-                </li>
-                <li>
-                    <a href='/consulta_usuario'>Consulta de Usuário</a>
-                </li>
-                <li>
-                    <a href='/escolha_atualizacao_usuario'>Atualização de Usuário</a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1>Gestão de Boletim de Ocorrência</h1>
-            <hr>
-            <ul class='menu'>
-                <li>
-                    <a href='/formulario_insercao_boletim_ocorrencia'>Inclusão de Boletim de Ocorrência</a>
-                </li>
-                <li>
-                    <a href='/consulta_boletim_ocorrencia'>Consulta de Boletim de Ocorrência</a>
-                </li>
-                <li>
-                    <a href='/escolha_atualizacao_boletim_ocorrencia'>Atualização de Boletim de Ocorrência</a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1>Relatórios</h1>
-            <hr>
-            <ul class='menu'>
-                <li>
-                    <a href='/relatorio_grafico_pizza'>Relatório em Gráfico de Pizza</a>
-                </li>
-                <li>
-                    <a href='/relatorio_grafico_organograma'>Relatório em Gráfico de Organograma</a>
-                </li>
-            </ul>
-        </section>
-    </body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pega Malandro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+    <link rel="stylesheet" href="/static/css/index.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+
+        <h1 class="brand-name">Pega Malandro</h1>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="wrapper">
+      <div class="card-container">
+        <a class="card" href="/alt_form">
+          <div class="card-icon">
+            <img src="/static/imagens/Delegacia icone.png" alt="Criar" />
+          </div>
+
+          <div class="card-text">
+            <h4>Criar Boletim</h4>
+          </div>
+        </a>
+
+        <a class="card" href="/alteracao">
+          <div class="card-icon">
+            <img src="/static/imagens/Alterar.png" alt="Alterar" />
+          </div>
+
+          <div class="card-text">
+            <h4>Alterar Boletim</h4>
+          </div>
+        </a>
+
+        <a class="card" href="/consulta">
+          <div class="card-icon">
+            <img src="/static/imagens/Luneta.png" alt="Consultar" />
+          </div>
+
+          <div class="card-text">
+            <h4>Consultar Boletim</h4>
+          </div>
+        </a>
+
+        <a class="card" href="/adm">
+          <div class="card-icon">
+            <img src="" alt="ADM" />
+          </div>
+
+          <div class="card-text">
+            <h4>ADM</h4>
+          </div>
+        </a>
+      </div>
+    </section>
+    <br />
+    <br />
+    <section class="wrapper">
+      <div class="main-text">
+        <h1>Atenção !!</h1>
+        <p>
+          Ligar para a polícia é uma ação crucial em diversas situações de
+          emergência e pode ser a diferença entre a segurança e o perigo. Quando
+          testemunhamos um crime em andamento, como um roubo, agressão ou
+          vandalismo, a resposta imediata das autoridades pode prevenir danos
+          maiores e garantir a detenção dos responsáveis. Além disso, em casos
+          de acidentes de trânsito, especialmente aqueles com feridos, a
+          presença policial é vital para organizar o resgate e manter a ordem no
+          local. A polícia também deve ser chamada em situações de
+          desaparecimento, onde cada minuto conta para localizar a pessoa
+          desaparecida, especialmente se for uma criança ou idoso. Existem
+          diferentes tipos de delegacias que desempenham papéis específicos na
+          proteção e serviço à comunidade. As Delegacias de Polícia Civil são
+          responsáveis por investigações criminais e atendimento ao público para
+          registro de ocorrências. Dentro da Polícia Civil, há delegacias
+          especializadas, como a Delegacia de Homicídios, focada na investigação
+          de assassinatos, e a Delegacia de Narcóticos, que combate o tráfico de
+          drogas. Outro exemplo importante é a Delegacia de Proteção à Criança e
+          ao Adolescente, que lida com crimes contra menores, incluindo abuso e
+          exploração infantil. As Delegacias de Polícia Militar têm um papel
+          preventivo, patrulhando ruas e garantindo a ordem pública. Elas são as
+          primeiras a responder a chamadas de emergência e são responsáveis por
+          ações imediatas em situações de crise. As Delegacias de Atendimento à
+          Mulher são especializadas em casos de violência doméstica e oferecem
+          um ambiente seguro e acolhedor para as vítimas denunciarem abusos. A
+          Delegacia de Trânsito se concentra em infrações e acidentes no
+          trânsito, trabalhando para manter a segurança nas vias públicas. Ligar
+          para a polícia é essencial não só para proteger a si mesmo, mas também
+          para garantir a segurança da comunidade. Quando todos cooperam e
+          acionam as autoridades competentes, contribuem para a manutenção da
+          ordem e a diminuição da criminalidade. Além disso, as informações
+          fornecidas pela população podem ser vitais para investigações e
+          resolução de casos. A Delegacia de Crimes Cibernéticos, por exemplo,
+          depende muitas vezes de denúncias para rastrear atividades ilícitas
+          online e proteger os cidadãos de fraudes e ataques virtuais. Em
+          situações de emergência médica, muitas vezes a polícia é chamada para
+          ajudar a controlar o trânsito e permitir o rápido acesso das
+          ambulâncias. Em casos de desastres naturais, como enchentes e
+          terremotos, a polícia coordena operações de resgate e assistência às
+          vítimas. A Delegacia de Meio Ambiente investiga crimes ambientais,
+          atuando na preservação dos recursos naturais e combate a ações ilegais
+          que prejudicam o ecossistema. Por fim, a colaboração com a polícia é
+          fundamental em eventos públicos, onde a segurança de grandes multidões
+          precisa ser garantida. As Delegacias de Defesa do Consumidor protegem
+          os cidadãos contra fraudes e práticas comerciais desleais, ajudando a
+          manter um mercado justo e equilibrado. Ligar para a polícia é um ato
+          de cidadania e responsabilidade social que ajuda a construir uma
+          sociedade mais segura e justa para todo
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul>
+        <a href=""><li>Privacy</li></a>
+        <a href=""><li>Terms</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+      <span>Copyright 2024</span>
+    </footer>
+  </body>
 </html>

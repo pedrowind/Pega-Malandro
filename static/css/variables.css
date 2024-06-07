@@ -1,0 +1,31 @@
+:root {
+  --text-color: hsl(30, 70%, 94%);
+  --text-color-light: hsl(30, 100%, 100%);
+  --text-color-dark: hsl(208, 70%, 5%);
+
+  --shadow-color: hsl(223, 95%, 7%, 0.5);
+
+  --border-color-light: hsl(0, 0%, 86%);
+
+  --background-color-blue: hsl(208, 40%, 35%);
+  --background-color-blue-light: hsl(208, 40%, 38%);
+  --background-color-blue-lighter: hsl(208, 40%, 45%);
+
+  --background-color-logo-blue: hsl(223, 95%, 7%);
+  --background-color-logo-blue-light: hsl(223, 95%, 13%);
+  --background-color-logo-blue-lighter: hsl(223, 95%, 20%);
+
+  --background-color-white: hsl(0, 0%, 100%);
+  --background-color-white-damp: hsl(0, 0%, 98%);
+  --background-color-whitesmoke: hsl(0, 0%, 96%);
+
+  --background-color-red_pink: hsl(341, 100%, 53%);
+  --background-color-red_pink-light: hsl(341, 100%, 60%);
+
+  --font-family-text: Raleway, sans-serif;
+  --font-family-text2: Baskervville, serif;
+
+  --font-family-title: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  --font-family-logo: "tilt neon", Anton;
+}

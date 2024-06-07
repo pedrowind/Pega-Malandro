@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang='pt-BR'>
     <head>
         <meta charset='UTF-8'>
@@ -26,6 +27,77 @@
                 </div>
             </form>
             <p class='msg'>{{ msg }}</p>
+=======
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+    <link rel="stylesheet" href="/static/css/login.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+
+        <h1 class="brand-name">Pega Malandro</h1>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="/">Voltar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form action="/login" method="post">
+        <div class="logo">
+          <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+
+          <h1 class="brand-name">Pega Malandro</h1>
+>>>>>>> 4d49e44963dfa437437e7900a7d79e86433ec06b
         </div>
-    </body>
+
+        <div class="wrapper">
+          <input type="text" name="username" placeholder="Usuário" required />
+          <input type="password" name="password" placeholder="Senha" required />
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="wrapper">
+          <a href="/cadastrar">Não tem uma conta? Cadastre-se.</a>
+          <a href="/esqueceu">Esqueceu a senha?</a>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <a href=""><li>Privacy</li></a>
+        <a href=""><li>Terms</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+      <span>Copyright 2024</span>
+    </footer>
+  </body>
 </html>
