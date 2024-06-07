@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Formulário de Cadastro</title>
+        <link rel='stylesheet' href='../static/style.css'>
+    </head>
+    <body>
+        <h1>Cadastro do Usuário</h1>
+        <hr>
+        <div>
+            <form action='/inserir_usuario' method='post'>
+                <table>
+                    <tr>
+                        <td>Nome de Usuário:</td>
+                        <td>
+                            <label>
+                                <input type='text' name='nome_usuario' required>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td>
+                            <label>
+                                <input type='email' name='email_usuario' required>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Senha:</td>
+                        <td>
+                            <label>
+                                <input type='password' name='senha_usuario' required>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Confirmar Senha:</td>
+                        <td>
+                            <label>
+                                <input type='password' name='confirmar_senha_usuario' required>
+                            </label>
+                        </td>
+                    </tr>
+
+                    {% if erro %}
+                        <p>{{ erro }}</p>
+                    {% endif %}
+
+                    <tr>
+                        <td colspan='4'>
+                            <input type='submit' value='Cadastrar-se'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <a href='/login'> Retornar ao Login</a>
+    </body>
+</html>
