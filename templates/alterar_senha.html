@@ -1,35 +1,97 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
 
-{% block conteudo %}
-    <form action='/alterar_senha' method='post'>
-        <table>
-            <tr>
-                <td>Digite Sua Senha Atual</td>
-                <td>
-                    <input type='password' name='senha_atual' id='senha_atual'>
-                </td>
-            </tr>
-            <tr>
-                <td>Digite Sua Nova Senha</td>
-                <td>
-                    <input type='password' name='nova_senha' id='nova_senha'>
-                </td>
-            </tr>
-            <tr>
-                <td>Confirme Sua Nova Senha</td>
-                <td>
-                    <input type='password' name='confirmar_senha' id='confirmar_senha'>
-                </td>
-            </tr>
-            <tr>
-                <td colspan='2'>     
-                    <button type='submit'>Alterar a Senha</button>
-                </td>
-            </tr>
-        </table>
-    </form>
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
 
-{% block msg %}
-    {{ msg }}
-{% endblock %}
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+    <link rel="stylesheet" href="/static/css/alterar-senha.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+
+        <h1 class="brand-name">Pega Malandro</h1>
+      </div>
+
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a class="nav-link" href="/">Voltar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form action="/cadastro" method="post">
+        <div class="logo">
+          <img
+            src="/static/imagens/PegaMalandroLogo.jpg"
+            alt="imagem do usuario"
+            id="image"
+          />
+
+          <h1 class="brand-name">Pega Malandro</h1>
+        </div>
+
+        <div class="form-container">
+          <input
+            required
+            type="password"
+            placeholder="Senha atual:"
+            id="senha_atual"
+          />
+          <input
+            required
+            type="password"
+            placeholder="Nova senha:"
+            id="Nova_senha"
+          />
+          <input
+            required
+            type="password"
+            placeholder="Confirmar nova senha:"
+            id="Nova_senha_confirm"
+          />
+        </div>
+
+        <button type="submit">Alterar senha</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <a href=""><li>Privacy</li></a>
+        <a href=""><li>Terms</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+      <span>Copyright 2024</span>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("user_image").onchange = function () {
+      var src = URL.createObjectURL(this.files[0]);
+      document.getElementById("image").src = src;
+    };
+  </script>
+</html>
