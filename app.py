@@ -23,8 +23,11 @@ def formulario_index():
 def formulario_login():
     return render_template("login.html")
 
+@aplicacao.route("/cadastrar_policial")
+def formulario_cadastrar_policial():
+    return render_template("cadastro_policial.html")
 
-@aplicacao.route("/cadastrar")
+@aplicacao.route("/cadastrar_usuario")
 def formulario_cadastrar():
     return render_template("cadastro_usuario.html")
 

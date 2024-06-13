@@ -21,7 +21,7 @@
     />
 
     <link rel="stylesheet" href="/static/css/header-footer.css" />
-    <link rel="stylesheet" href="/static/css/cadastro-usuario.css" />
+    <link rel="stylesheet" href="/static/css/cadastro-policial.css" />
   </head>
 
   <body>
@@ -42,7 +42,7 @@
     </header>
 
     <main>
-      <form action="/cadastrar_usuario" method="post">
+      <form action="/cadastrar_policial" method="post">
         <div class="logo">
           <h1 class="brand-name">Pega Malandro</h1>
         </div>
@@ -87,6 +87,22 @@
         <div class="form-container">
           <input required type="email" placeholder="Email:" />
           <input required type="number" placeholder="Telefone:" />
+        </div>
+
+        <div class="form-container">
+          <input required type="text" placeholder="Delegacia:" />
+          <input required type="text" placeholder="Patente:" />
+        </div>
+
+        <div class="form-container">
+          <input required type="number" placeholder="Registro:" />
+
+          <div class="form-container-date">
+            <label class="label-date" for="data_admissao"
+              >Selecione a data de admissão:</label
+            >
+            <input required type="date" id="data_admissao" />
+          </div>
         </div>
 
         <div class="form-container">
