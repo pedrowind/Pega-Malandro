@@ -9,13 +9,11 @@
 </head>
 
 <body>
-
     <header class="header">
         <div class="logo">
             <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
             <h1 class="brand-name">Pega Malandro</h1>
         </div>
-
         <nav class="nav-bar">
             <ul>
                 <li>
@@ -25,10 +23,8 @@
         </nav>
     </header>
     <main>
-        <section class="Formulario_case">
-
+        <section class="formulario_case">
             <form action='../controllers/boletim_ocorrencia.php' method='POST'>
-
                 <label for="ocorrencia">Escolha a Ocorrência:</label>
                 <select name="ocorrencia" id="ocorrencia">
                     <option value="1">Roubo</option>
@@ -43,111 +39,113 @@
                     <option value="10">Tráfico de Drogas</option>
                     <option value="11">Porte Ilegal de Arma</option>
                 </select>
-
-                <h2>Dados da Ocorrência</h2>
-                <div>
-                    <label for='data_inicio'>Data Início:</label>
-                    <input type='date' name='data_inicio' id='data_inicio' required>
-
-                    <label for='hora_inicio'>Hora Início:</label>
-                    <input type='time' name='hora_inicio' id='hora_inicio' required>
-                </div>
                 
+                <h2>Dados da Ocorrência</h2>
 
-                <label for='data_fim'>Data Fim:</label>
-                <input type='date' name='data_fim' id='data_fim' required>
-
-                <label for='hora_fim'>Hora Fim:</label>
-                <input type='time' name='hora_fim' id='hora_fim' required>
-
-                <label for='uf'>UF:</label>
-                <input type='text' name='uf' id='uf' required>
-
-                <label for='cidade'>Cidade:</label>
-                <input type='text' name='cidade' id='cidade' required>
-
-                <label for='area'>Setor/Área:</label>
-                <input type='text' name='area' id='area' required>
-
-                <label for='quadra'>Quadra:</label>
-                <input type='text' name='quadra' id='quadra' required>
-
-                <label for='complemento'>Complemento:</label>
-                <input type='text' name='complemento' id='complemento'>
-
-                <label for='descricao'>Descrição:</label>
-                <textarea name='descricao' id='descricao' required></textarea>
+                <div class="ocorrencia">
+                    <div class="data_hora">
+                        <div class="data_hora_board">
+                            <label for='data_inicio'>Data Início:</label>
+                            <input type='date' name='data_inicio' id='data_inicio' required>
+                            <label for='hora_inicio'>Hora Início:</label>
+                            <input type='time' name='hora_inicio' id='hora_inicio' required>
+                        </div>
+                        <div class="data_hora_board">
+                            <label for='data_fim'>Data Fim:</label>
+                            <input type='date' name='data_fim' id='data_fim' required>
+                            <label for='hora_fim'>Hora Fim:</label>
+                            <input type='time' name='hora_fim' id='hora_fim' required>
+                        </div>
+                    </div>
+                    <div class="local_descricao">
+                        <div class="local_descricao_board">
+                            <label for='uf'>UF:</label>
+                            <input type='text' name='uf' id='uf' required>
+                            <label for='cidade'>Cidade:</label>
+                            <input type='text' name='cidade' id='cidade' required>
+                            <label for='area'>Setor/Área:</label>
+                            <input type='text' name='area' id='area' required>
+                        </div>
+                        <div class="local_descricao_board">
+                            <label for='quadra'>Quadra:</label>
+                            <input type='text' name='quadra' id='quadra' required>
+                            <label for='complemento'>Complemento:</label>
+                            <input type='text' name='complemento' id='complemento'>
+                            <label for='descricao'>Descrição:</label>
+                            <textarea name='descricao' id='descricao' required></textarea>
+                        </div>
+                    </div>
+                </div>
 
                 <h2>Dados da Testemunha</h2>
 
-                <label for='id_policia'>Possui Testemunhas?</label>
-                <input type='number' name='id_policia' id='id_policia' required>
+                <div class="testemunha">
+                    <div class="dados_pessoais">
+                        <div>
+                            <label for='id_policia'>Tem Testemunhas?</label>
+                            <input type='number' name='id_policia' id='id_policia' required>
+                            <label for='nome_testemunha'>Nome Completo:</label>
+                            <input type='text' name='nome_testemunha' id='nome_testemunha' required>
+                            <label for='cpf_testemunha'>CPF:</label>
+                            <input type='number' name='cpf_testemunha' id='cpf_testemunha' required>
+                            <label for='rg_testemunha'>RG:</label>
+                            <input type='number' name='rg_testemunha' id='rg_testemunha' required>
+                        </div>
+                        <div>
+                            <label for='orgao_emissor'>Órgão Emissor:</label>
+                            <input type='text' name='orgao_emissor' id='orgao_emissor' required>
+                            <label for='data_nascimento_testemunha'>Data Nascimento:</label>
+                            <input type='date' name='data_nascimento_testemunha' id='data_nascimento_testemunha' required>
+                            <label for='raca'>Raça:</label>
+                            <input type='text' name='raca' id='raca' required>
+                            <label for='sexo'>Sexo de Nascimento:</label>
+                            <input type='text' name='sexo' id='sexo' required>
+                        </div>
+                        <div>
+                            <label for='passaporte'>Passaporte:</label>
+                            <input type='text' name='passaporte' id='passaporte'>
+                            <label for='nome_pai'>Nome do Pai:</label>
+                            <input type='text' name='nome_pai' id='nome_pai'>
+                            <label for='nome_mae'>Nome da Mãe:</label>
+                            <input type='text' name='nome_mae' id='nome_mae'>
+                        </div>
+                    </div>
 
-                <label for='nome_testemunha'>Nome Completo:</label>
-                <input type='text' name='nome_testemunha' id='nome_testemunha' required>
-
-                <label for='cpf_testemunha'>CPF:</label>
-                <input type='number' name='cpf_testemunha' id='cpf_testemunha' required>
-
-                <label for='rg_testemunha'>RG:</label>
-                <input type='number' name='rg_testemunha' id='rg_testemunha' required>
-
-                <label for='orgao_emissor'>Órgão Emissor:</label>
-                <input type='text' name='orgao_emissor' id='orgao_emissor' required>
-
-                <label for='data_nascimento_testemunha'>Data Nascimento:</label>
-                <input type='date' name='data_nascimento_testemunha' id='data_nascimento_testemunha' required>
-
-                <label for='raca'>Raça:</label>
-                <input type='text' name='raca' id='raca' required>
-
-                <label for='sexo'>Sexo de Nascimento:</label>
-                <input type='text' name='sexo' id='sexo' required>
-
-                <label for='passaporte'>Passaporte:</label>
-                <input type='text' name='passaporte' id='passaporte'>
-
-                <label for='nome_pai'>Nome do Pai:</label>
-                <input type='text' name='nome_pai' id='nome_pai'>
-
-                <label for='nome_mae'>Nome da Mãe:</label>
-                <input type='text' name='nome_mae' id='nome_mae'>
-
-                <label for='cep'>CEP:</label>
-                <input type='text' name='cep' id='cep' required>
-
-                <label for='uf_testemunha'>UF:</label>
-                <input type='text' name='uf_testemunha' id='uf_testemunha' required>
-
-                <label for='cidade_testemunha'>Cidade:</label>
-                <input type='text' name='cidade_testemunha' id='cidade_testemunha' required>
-
-                <label for='area_testemunha'>Setor/Área:</label>
-                <input type='text' name='area_testemunha' id='area_testemunha' required>
-
-                <label for='endereco'>Endereço:</label>
-                <input type='text' name='endereco' id='endereco' required>
-
-                <label for='complemento_testemunha'>Complemento:</label>
-                <input type='text' name='complemento_testemunha' id='complemento_testemunha'>
-
-                <label for='email_testemunha'>E-mail:</label>
-                <input type='email' name='email_testemunha' id='email_testemunha' required>
-
-                <label for='telefone1'>Telefone:</label>
-                <input type='tel' name='telefone1' id='telefone1' required>
-
-                <label for='telefone2'>Telefone Alternativo:</label>
-                <input type='tel' name='telefone2' id='telefone2'>
+                    
+                    <div class="endereco_contato">
+                        <div>
+                            <label for='cep'>CEP:</label>
+                            <input type='text' name='cep' id='cep' required>
+                            <label for='uf_testemunha'>UF:</label>
+                            <input type='text' name='uf_testemunha' id='uf_testemunha' required>
+                            <label for='cidade_testemunha'>Cidade:</label>
+                            <input type='text' name='cidade_testemunha' id='cidade_testemunha' required>
+                        </div>
+                        <div>
+                            <label for='area_testemunha'>Setor/Área:</label>
+                            <input type='text' name='area_testemunha' id='area_testemunha' required>
+                            <label for='endereco'>Endereço:</label>
+                            <input type='text' name='endereco' id='endereco' required>
+                            <label for='complemento_testemunha'>Complemento:</label>
+                            <input type='text' name='complemento_testemunha' id='complemento_testemunha'>
+                        </div>
+                        <div>
+                            <label for='email_testemunha'>E-mail:</label>
+                            <input type='email' name='email_testemunha' id='email_testemunha' required>
+                            <label for='telefone1'>Telefone:</label>
+                            <input type='tel' name='telefone1' id='telefone1' required>
+                            <label for='telefone2'>Telefone Alternativo:</label>
+                            <input type='tel' name='telefone2' id='telefone2'>
+                        </div>
+                    </div>
+                </div>
 
                 <input type='submit' value='Inserir'>
                 <input type='submit' value='Voltar'>
                 <input type='submit' value='Finalizar'>
             </form>
-
         </section>
     </main>
-
     <footer class="footer">
         <ul>
             <li><a href="">Privacy</a></li>
