@@ -1,0 +1,203 @@
+@import url(variables.css);
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    width: 97%;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: #fff;
+    padding:30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4c4c4c;
+    padding: 10px;
+    color: #fff;
+}
+.top {
+    display: flex;
+    align-items: flex-start; /* Alinha itens ao topo */
+}
+
+.foto {
+    position: relative; /* Relativo para permitir o posicionamento do status */
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente */
+    margin-right: 20px; /* Espaçamento entre a foto e os dados */
+}
+
+.status-online {
+    position: absolute; /* Absoluto para posicionar em relação à foto */
+    top: 0;
+    display: flex;
+    ;
+    align-items: bottom; /* Alinha itens verticalmente */
+    font-size: 14px;
+    color: #666;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50; /* Cor da bolinha verde */
+    border-radius: 50%; /* Borda arredondada para a bolinha */
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1; /* Ocupa todo o espaço disponível */
+}
+
+.form-group {
+    flex-basis: calc(50% - 10px); /* 50% de largura menos o espaçamento */
+    margin-bottom: 20px;
+}
+
+.form-group:nth-child(odd) {
+    margin-right: 20px; /* Adiciona margem à direita em grupos ímpares */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+p {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+p {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.foto {
+    margin-bottom: 20px;
+}
+
+.foto-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px solid #999;
+}
+
+.tabela-ocorrencias {
+    margin-top: 20px;
+}
+
+.tabela-ocorrencias table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-ocorrencias th,
+.tabela-ocorrencias td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela-ocorrencias th {
+    background-color: #4c4c4c;
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-mudar-senha,
+.btn-confirmar,
+.btn-alterar {
+    background-color: #4c4c4c;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4c4c4c;
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer span {
+    display: block;
+    margin-top: 10px;
+}
