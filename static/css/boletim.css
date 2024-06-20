@@ -1,0 +1,16 @@
+main{
+    display: flex;
+    justify-content: center;
+
+    background-color: darkgray;
+    
+}
+
+.boletim_box{
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
