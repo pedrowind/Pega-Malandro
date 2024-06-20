@@ -23,40 +23,107 @@
     </header>
     <main>
         <section class="boletim_box">
-            <h2>Dados do Fato</h2>
-            <div>
+            <!-- ... -->
+            <div class="form-row">
                 <div>
-                    <p>Data Inicial:</p>
-                    <p>Data Final:</p>
-                    
-                    
+                    <p>Início:</p>
+                    <input type="date" name="data_inicio" value="{{ data_inicio }}">
                 </div>
                 <div>
-                    <p>Hora Inicial:</p>
-                    <p>Hora Final:</p>
+                    <p>Fim:</p>
+                    <input type="date" name="data_fim" value="{{ data_fim }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <p>UF:</p>
+                    <select name="uf">
+                        <option value="DF" {% if uf == "DF" %}selected{% endif %}>DF</option>
+                        <!-- Add other options as needed -->
+                    </select>
                 </div>
                 <div>
-                    <div>
-                        <p>UF:</p>
-                        <p>Cidade:</p>
-                        <p>Quadra:</p>
-                        <p>Setor Área:</p>
-                    </div>
+                    <p>Cidade:</p>
+                    <input type="text" name="cidade" value="{{ cidade }}">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <p>Setor/Área:</p>
+                    <input type="text" name="setor_area" value="{{ setor_area }}">
+                </div>
+                <div>
                     <p>Complemento:</p>
+                    <input type="text" name="complemento" value="{{ complemento }}">
+                </div>
+                <div>
+                    <p>Quadra:</p>
+                    <input type="text" name="quadra" value="{{ quadra }}">
                 </div>
             </div>
-
             <h2>Envolvidos</h2>
-            <div>
-                <p></p>
-                <p></p>
+            <div class="form-row">
+                <div>
+                    <p>Nome:</p>
+                    <input type="text" name="nome1" value="{{ nome1 }}">
+                </div>
+                <div>
+                    <p>CPF:</p>
+                    <input type="text" name="cpf1" value="{{ cpf1 }}">
+                </div>
+                <div>
+                    <p>Situação:</p>
+                    <select name="situacao1">
+                        <option value="vitima" {% if situacao1 == "vitima" %}selected{% endif %}>Vítima</option>
+                        <option value="testemunha" {% if situacao1 == "testemunha" %}selected{% endif %}>Testemunha</option>
+                        <option value="suspeito" {% if situacao1 == "suspeito" %}selected{% endif %}>Suspeito</option>
+                    </select>
+                </div>
             </div>
-            
-            <h2>Descrição</h2>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum est nam vero, suscipit fugiat saepe blanditiis labore ipsum, earum voluptatem tempore nesciunt error, distinctio nemo inventore ab harum dolores natus!</p>
+            <div class="form-row">
+                <div>
+                    <p>Nome:</p>
+                    <input type="text" name="nome2" value="{{ nome2 }}">
+                </div>
+                <div>
+                    <p>CPF:</p>
+                    <input type="text" name="cpf2" value="{{ cpf2 }}">
+                </div>
+                <div>
+                    <p>Situação:</p>
+                    <select name="situacao2">
+                        <option value="vitima" {% if situacao2 == "vitima" %}selected{% endif %}>Vítima</option>
+                        <option value="testemunha" {% if situacao2 == "testemunha" %}selected{% endif %}>Testemunha</option>
+                        <option value="suspeito" {% if situacao2 == "suspeito" %}selected{% endif %}>Suspeito</option>
+                    </select>
+                </div>
             </div>
-
+            <div class="form-row">
+                <div>
+                    <p>Nome:</p>
+                    <input type="text" name="nome3" value="{{ nome3 }}">
+                </div>
+                <div>
+                    <p>CPF:</p>
+                    <input type="text" name="cpf3" value="{{ cpf3 }}">
+                </div>
+                <div>
+                    <p>Situação:</p>
+                    <select name="situacao3">
+                        <option value="vitima" {% if situacao3 == "vitima" %}selected{% endif %}>Vítima</option>
+                        <option value="testemunha" {% if situacao3 == "testemunha" %}selected{% endif %}>Testemunha</option>
+                        <option value="suspeito" {% if situacao3 == "suspeito" %}selected{% endif %}>Suspeito</option>
+                    </select>
+                </div>
+            </div>
+            <h2>Descreva o Fato:</h2>
+            <div>
+                <textarea name="descricao">{{ descricao }}</textarea>
+            </div>
+            <div class="buttons">
+                <button type="button">Voltar</button>
+                <button type="submit">Alterar</button>
+            </div>
         </section>
     </main>
     <footer class="footer">

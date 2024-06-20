@@ -1,16 +1,82 @@
-main{
-    display: flex;
-    justify-content: center;
-
+body {
     background-color: darkgray;
-    
+    font-family: Arial, sans-serif;
 }
 
-.boletim_box{
-    width: 60px;
+main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    
+}
+.envolvidos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.boletim_box {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.boletim_box h2 {
+    border-bottom: 2px solid lightgreen;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.boletim_box div {
+    margin-bottom: 15px;
+}
+.boletim_box p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+.boletim_box input, .boletim_box select, .boletim_box textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.boletim_box .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+.boletim_box .form-row > div {
+    flex: 1;
+    margin-right: 10px;
+}
+.boletim_box .form-row > div:last-child {
+    margin-right: 0;
+}
+
+.boletim_box input, .boletim_box select, .boletim_box textarea {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.boletim_box input[type="date"], .boletim_box input[type="text"], .boletim_box select {
+    width: calc(100% - 22px);
+}
+.boletim_box textarea {
+    height: 100px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons button:hover {
     background-color: darkgray;
 }
