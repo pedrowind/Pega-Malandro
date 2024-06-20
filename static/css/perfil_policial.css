@@ -37,14 +37,6 @@ body {
     margin-right: 20px;
 }
 
-.status-online {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
 .status-dot {
     width: 10px;
     height: 10px;
@@ -100,36 +92,16 @@ p {
     border-radius: 5px;
 }
 
-form {
-    margin-top: 20px;
+.foto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Mantém a proporção da imagem dentro do quadrado */
+    border-radius: 8px; /* Ajuste para um quadrado com bordas levemente arredondadas */
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-p {
-    padding: 10px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.foto {
-    margin-bottom: 20px;
-}
-
-.foto-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
-    border: 1px solid #999;
+.status-online {
+    margin-top: 2%;
+    margin-bottom: 10px;
 }
 
 .tabela-ocorrencias-container {
