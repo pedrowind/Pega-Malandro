@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../static/css/perfil_policial.css">
+    <link rel="shortcut icon" type="imagex/png" href="/static/imagens/PegaMalandroLogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+          <h1 class="brand-name">Pega Malandro</h1>
+        </div>
+  
+        <nav class="nav-bar">
+          <ul>
+            <li>
+              <a class="nav-link" href="/">Voltar</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container">
+            <div class="top">
+                <div class="foto">
+                  <label>      
+                    <img src="/static/imagens/admin.jpg" alt="Foto do Policial">
+                </label>
+                <div class="status-online">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+                </div>
+                <div class="info">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <p id="name">John Doe</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="patente">Patente</label>
+                        <p id="patente">Coronel</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="registro">Número de Registro</label>
+                        <p id="registro">123456</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="delegacia">Delegacia</label>
+                        <p id="delegacia">Central</p>
+                    </div>
+                </div>
+            </div>
+            <h2>Tabela de Ocorrências</h2>
+            <div class="tabela-ocorrencias-container">
+                <div class="tabela-ocorrencias">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>001</td><td>Assalto</td><td>Resolvido</td></tr>
+                            <tr><td>002</td><td>Roubo</td><td>Pendente</td></tr>
+                            <tr><td>003</td><td>Furto</td><td>Resolvido</td></tr>
+                            <tr><td>004</td><td>Homicídio</td><td>Em andamento</td></tr>
+                            <tr><td>005</td><td>Sequestro</td><td>Resolvido</td></tr>
+                            <tr><td>006</td><td>Estupro</td><td>Pendente</td></tr>
+                            <tr><td>007</td><td>Tráfico de drogas</td><td>Resolvido</td></tr>
+                            <tr><td>008</td><td>Violência doméstica</td><td>Resolvido</td></tr>
+                            <tr><td>009</td><td>Fraude</td><td>Pendente</td></tr>
+                            <tr><td>010</td><td>Corrupção</td><td>Em andamento</td></tr>
+                            <tr><td>011</td><td>Extorsão</td><td>Resolvido</td></tr>
+                            <tr><td>012</td><td>Lesão corporal</td><td>Pendente</td></tr>
+                            <tr><td>013</td><td>Contrabando</td><td>Resolvido</td></tr>
+                            <tr><td>014</td><td>Desaparecimento</td><td>Resolvido</td></tr>
+                            <tr><td>015</td><td>Latrocínio</td><td>Pendente</td></tr>
+                            <tr><td>016</td><td>Estelionato</td><td>Resolvido</td></tr>
+                            <tr><td>017</td><td>Vandalismo</td><td>Em andamento</td></tr>
+                            <tr><td>018</td><td>Abuso de autoridade</td><td>Pendente</td></tr>
+                            <tr><td>019</td><td>Invasão de propriedade</td><td>Resolvido</td></tr>
+                            <tr><td>020</td><td>Atentado ao pudor</td><td>Resolvido</td></tr>
+                            <tr><td>021</td><td>Assédio</td><td>Em andamento</td></tr>
+                            <tr><td>022</td><td>Ameaça</td><td>Pendente</td></tr>
+                            <tr><td>023</td><td>Abandono de incapaz</td><td>Resolvido</td></tr>
+                            <tr><td>024</td><td>Incêndio</td><td>Resolvido</td></tr>
+                            <tr><td>025</td><td>Lesão corporal grave</td><td>Pendente</td></tr>
+                            <tr><td>026</td><td>Porte ilegal de armas</td><td>Resolvido</td></tr>
+                            <tr><td>027</td><td>Exploração infantil</td><td>Resolvido</td></tr>
+                            <tr><td>028</td><td>Desacato</td><td>Pendente</td></tr>
+                            <tr><td>029</td><td>Receptação</td><td>Em andamento</td></tr>
+                            <tr><td>030</td><td>Lavagem de dinheiro</td><td>Resolvido</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn-alterar-senha">Alterar Senha</button>
+                <button type="submit" class="btn-alterar-infos">Alterar Informações</button>
+            </div>
+        </div>
+      </main>
+    
+      
+      <footer class="footer">
+        <ul>
+          <a href=""><li>Privacy</li></a>
+          <a href=""><li>Terms</li></a>
+          <a href=""><li>Contact</li></a>
+        </ul>
+        <span>Copyright 2024</span>
+      </footer>
+    </body>
+</html>

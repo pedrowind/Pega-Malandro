@@ -139,7 +139,7 @@ button {
     cursor: pointer;
 }
 
-.btn-alterar-senha {
+.btn-alterar-senha,.btn-alterar-infos {
     background-color: #4c4c4c;
     color: #fff;
     margin-right: 10px;
