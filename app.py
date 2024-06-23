@@ -1,40 +1,23 @@
 from flask import Flask, redirect, url_for
 from dotenv import load_dotenv
 import os
-from src.routes.login import modulo_login
-from src.routes.usuario import modulo_usuario
-from src.routes.boletim_ocorrencia import modulo_boletim_ocorrencia
-from src.routes.relatorio_grafico import modulo_relatorio_grafico
-
+from src.routes.rota_login import mod_login
+from src.routes.rota_bo import mod_bo
+from src.routes.rota_tst import mod_tst
 
 load_dotenv()
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+app = Flask(__name__)
+app.config['SECRET_KEY'] = SECRET_KEY
 
-
-aplicacao = Flask(__name__)
-aplicacao.config["SECRET_KEY"] = SECRET_KEY
-
-
-@aplicacao.route("/")
+@app.route('/')
 def formulario_index():
-<<<<<<< HEAD
-    return redirect(url_for('modulo_login.login'))
-=======
-    return render_template("index.html")
+  return redirect(url_for('mod_login.login'))
 
+app.register_blueprint(mod_login)
+app.register_blueprint(mod_bo)
+app.register_blueprint(mod_tst)
 
-@aplicacao.route("/login")
-def formulario_login():
-    return render_template("login.html")
->>>>>>> 4d49e44963dfa437437e7900a7d79e86433ec06b
-
-
-aplicacao.register_blueprint(modulo_login)
-aplicacao.register_blueprint(modulo_usuario)
-aplicacao.register_blueprint(modulo_boletim_ocorrencia)
-aplicacao.register_blueprint(modulo_relatorio_grafico)
-
-
-if __name__ == "__main__":
-    aplicacao.run(debug=True)
+if __name__ == '__main__':
+  app.run()

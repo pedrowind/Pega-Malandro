@@ -1,73 +1,82 @@
 <!DOCTYPE html>
-<html lang='pt-BR'>
-    <head>
-        <link rel='stylesheet' href='../static/layout.css'>
-        <title>Login</title>
-    </head>
-    <body>
-        <div class='grid-container'>
-            <div class='cab'>
-                <table class='titulo'>
-                    <tr>
-                        <td>Login</td>
-                        <td style='padding-left: 80px;'>
-                            Usuário Ativo:
-                                    <b>{{ session['usuario']['nme_usr'] }}</b>
-                        </td>
-                        <td style='padding-left: 80px;'>
-                            Perfil:
-                                    {% if session['usuario']['pfl_usr'] == 'A': %}
-                                        <b>Administrador</b>
-                                    {% endif %}
+<html>
+  <head>
+    <link rel='stylesheet' href='../static/layout.css'>
+    <title>Login do Sistema</title>
+  </head>
+  <body>
+    <div class='grid-container'>
+      <div class='cab'>
+        <table class='titulo'>
+          <tr>
+            <td>Login no Sistema</td>
+            <td style='padding-left: 80px;'>
+              Usuário Ativo:
+                  <b>{{ session['usuario']['nme_usr'] }}</b>
+            </td>
+            <td style='padding-left: 80px;'>
+              Perfil:
+                  {% if session['usuario']['pfl_usr'] == 'A': %}
+                    <b>Administrador</b>
+                  {% endif %}
 
-                                    {% if session['usuario']['pfl_usr'] == 'G': %}
-                                        <b>Gerente</b>
-                                    {% endif %}
+                  {% if session['usuario']['pfl_usr'] == 'P': %}
+                    <b>Policial</b>
+                  {% endif %}
 
-                                    {% if session['usuario']['pfl_usr'] == 'C': %}
-                                        <b>Usuário Comum</b>
-                                    {% endif %}
-                        </td>
-                        <td style='padding-left: 80px;'>
-                            <button class='btn_sair' onclick='window.location = "/sair"'>Sair do Sistema</button>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class='menu'>
-                <ul class='menu-vertical'>
-                    {% if session['usuario']['pfl_usr'] == 'A': %}
-                        <li>
-                            <a href='/form_inc'>Incluir Novo Usuário</a>
-                        </li>
-                        <li>
-                            <a href='/modificar'>Alterar/Excluir Usuário</a>
-                        </li>
-                    {% endif %}
+                  {% if session['usuario']['pfl_usr'] == 'C': %}
+                    <b>Usuário Comum</b>
+                  {% endif %}
+            </td>
+            <td style='padding-left: 80px;'>
+              <button class='btn_sair' onclick='window.location = "/sair"'>Sair do Sistema</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class='menu'>
+        <ul class='menu-vertical'>
+          {% if session['usuario']['pfl_usr'] == 'A': %}
+            <li>
+              <a href='/incluir_usuario'>Incluir Novo Usuário</a>
+            </li>
+            <li>
+              <a href='/listar_usuarios'>Alterar/Excluir Usuário</a>
+            </li>
+          {% endif %}
 
-                    {% if session['usuario']['pfl_usr'] == 'G': %}
-                        <li>
-                            <a href='/resetar_senha'>Resetar Senha do Usuário</a>
-                        </li>
-                    {% endif %}
+          {% if session['usuario']['pfl_usr'] == 'P' or session['usuario']['pfl_usr'] == 'A': %}
+            <li>
+              <a href='/resetar_senha'>Resetar Senha do Usuário</a>
+            </li>
+          {% endif %}
+
+          <li>
+            <a href='/incluir_bo'>Criar B.O</a>
+          </li>
+          <li>
+            <a href='/listar_bos'>Alterar/Excluir B.O's</a>
+          </li>
+          <li>
+            <a href='/alterar_senha'>Alterar Sua Senha</a>
+          </li>
+        </ul>
+      </div>
+      <div class='conteudo'>
+        {% block conteudo %}
+
+        {% endblock %}
+      </div>
+      <div class='rodape'>
+        <p class='msg'>
+          {% block msg %}
+          
+          {% endblock %}
+        </p>
+      </div>
+    </div>
+    {% block script %}
     
-                    <li>
-                        <a href='/alterar_senha'>Alterar Sua Senha</a>
-                    </li>
-                </ul>
-            </div>
-            <div class='conteudo'>
-                {% block conteudo %}
-
-                {% endblock %}
-            </div>
-            <div class='rodape'>
-                <p class='msg'>
-                    {% block msg %}
-
-                    {% endblock %}
-                </p>
-            </div>
-        </div>
-    </body>
+    {% endblock %}
+  </body>
 </html>

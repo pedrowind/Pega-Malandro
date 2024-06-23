@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/incluir_bo' method='post'>
+    <div>
+      <h2>Dados do Usuário</h2>
+      <table>
+        <tr>
+          <td>Usuário:</td>
+          <td>
+            <input type='text' name='nme_usr' id='nme_usr' maxlength='20' readonly value='{{ usr["nme_usr"] }}'>
+          </td>
+        </tr>
+        <tr>
+          <td>E-mail:</td>
+          <td>
+            <input type='email' name='eml_usr' id='eml_usr' maxlength='50' readonly value='{{ usr["eml_usr"] }}'>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <h2>Dados do B.O</h2>
+      <table>
+        <tr>
+          <td>Data Início:</td>
+          <td>
+            <input type='datetime-local' name='dta_ini_bo' id='dta_ini_bo' required>
+          </td>
+        </tr>
+        <tr>
+          <td>Data Fim:</td>
+          <td>
+            <input type='datetime-local' name='dta_fim_bo' id='dta_fim_bo' required>
+          </td>
+        </tr>
+        <tr>
+          <td>UF:</td>
+          <td>
+            <select name='uf_bo' id='uf_bo' required>
+              <option value='DF'>DF</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Cidade:</td>
+          <td>
+            <select name='cid_bo' id='cid_bo' required>
+              <option value='Brasília'>Brasília</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Setor:</td>
+          <td>
+            <select name='set_bo' id='set_bo' required>
+              <option value='Asa Norte'>Asa Norte</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Quadra:</td>
+          <td>
+            <select name='qua_bo' id='qua_bo' required>
+              <option value='108 Norte'>108 Norte</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Complemento:</td>
+          <td>
+            <input type='text' name='com_bo' id='com_bo' maxlength='20'>
+          </td>
+        </tr>
+        <tr>
+          <td>Descrição:</td>
+          <td>
+            <textarea name='dsc_bo' id='dsc_bo' maxlength='50' required></textarea>
+          </td>
+        </tr>
+      </table>
+      <tr>
+        <td colspan='3'>
+          <button type='submit'>Criar B.O</button>
+        </td>
+      </tr>
+    </div>
+  </form>
+  {% include 'incluir_tst.html' %}
+
+  {% include 'listar_bos_by_usuario.html' %}
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}

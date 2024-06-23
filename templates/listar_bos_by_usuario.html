@@ -1,0 +1,33 @@
+{% block conteudo %}
+  <form action='/listar_bos_by_usuario' method='post'>
+    <button type='submit'>Buscar Seus B.O's</button>
+    {% if lista | length: %}
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Data Início</th>
+          <th>Data Fim</th>
+          <th>Opções</th>
+        </tr>
+        {% for bo in lista %}
+          <tr>
+            <td>{{ bo['idt_bo'] }}</td>
+            <td>{{ bo['dta_ini_bo'] }}</td>
+            <td>{{ bo['dta_fim_bo'] }}</td>
+            <td>
+              <button type='button' onclick='listar_tsts("{{ bo["idt_bo"] }}")'>Listar Testemunhas</button>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+  </form>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    function listar_tsts(idt_bo) {
+      window.location = '/listar_tsts?idt_bo=' + idt_bo;
+    }
+  </script>
+{% endblock %}

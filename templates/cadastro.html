@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Formulário de Cadastro</title>
-        <link rel='stylesheet' href='../static/style.css'>
-    </head>
-    <body>
-        <h1>Cadastro do Usuário</h1>
-        <hr>
-        <div>
-            <form action='/inserir_usuario' method='post'>
-                <table>
-                    <tr>
-                        <td>Nome de Usuário:</td>
-                        <td>
-                            <label>
-                                <input type='text' name='nome_usuario' required>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>E-mail:</td>
-                        <td>
-                            <label>
-                                <input type='email' name='email_usuario' required>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Senha:</td>
-                        <td>
-                            <label>
-                                <input type='password' name='senha_usuario' required>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Confirmar Senha:</td>
-                        <td>
-                            <label>
-                                <input type='password' name='confirmar_senha_usuario' required>
-                            </label>
-                        </td>
-                    </tr>
-
-                    {% if erro %}
-                        <p>{{ erro }}</p>
-                    {% endif %}
-
-                    <tr>
-                        <td colspan='4'>
-                            <input type='submit' value='Cadastrar-se'>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <a href='/login'> Retornar ao Login</a>
-    </body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <form action='/cadastro' method='post'>
+      <table>
+        <tr>
+          <td>Usuário:</td>
+          <td>
+            <input type='text' name='nme_usr' id='nme_usr' maxlength='20' required>
+          </td>
+        </tr>
+        <tr>
+          <td>E-mail:</td>
+          <td>
+            <input type='email' name='eml_usr' id='eml_usr' maxlength='50' required>
+          </td>
+        </tr>
+        <tr>
+          <td>Senha:</td>
+          <td>
+            <input type='password' name='pwd_usr' id='pwd_usr' maxlength='20' required>
+          </td>
+        </tr>
+        <tr>
+          <td>Confirmar Senha:</td>
+          <td>
+            <input type='password' name='confirmar_pwd_usr' id='confirmar_pwd_usr' maxlength='20' required>
+          </td>
+        </tr>
+        <tr>
+          <td colspan='3'>
+            <button type='submit'>Efetuar Cadastro</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div>
+      <a href='/login'>Ir ao Login!</a>
+    </div>
+    {% block msg %}
+      {{ msg }}
+    {% endblock %}
+  </body>
 </html>
