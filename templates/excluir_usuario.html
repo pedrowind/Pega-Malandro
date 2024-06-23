@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/excluir_usuario' method='post'>
+    <table>
+        <tr>
+          <td>Identificador:</td>
+          <td>
+            <input type='text' name='idt_usr' id='idt_usr' readonly value='{{ usr["idt_usr"] }}'>
+          </td>
+        </tr>
+        <tr>
+          <td colspan='1'>
+            <button type='submit'>Excluir Usuário</button>
+          </td>
+        </tr>
+    </table>
+  </form>
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}

@@ -1,0 +1,142 @@
+{% block conteudo %}
+  <form action='/incluir_tst' method='post'>
+    <h2>Dados da Testemunha</h2>
+    <table>
+      <tr>
+        <td>Nome Completo:</td>
+        <td>
+          <input type='text' name='nme_tst' id='nme_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>CPF:</td>
+        <td>
+          <input type='text' name='cpf_tst' id='cpf_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>RG:</td>
+        <td>
+          <input type='text' name='rg_tst' id='rg_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Órgão Emissor:</td>
+        <td>
+          <input type='text' name='org_tst' id='org_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Data de Nascimento:</td>
+        <td>
+          <input type='date' name='dta_nsc_tst' id='dta_nsc_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Raça:</td>
+        <td>
+          <select name='rca_tst' id='rca_tst'>
+            <option value='N'>Negro</option>
+            <option value='B'>Branco</option>
+            <option value='A'>Amarelo</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Sexo:</td>
+        <td>
+          <select name='sxo_tst' id='sxo_tst'>
+            <option value='H'>Homem</option>
+            <option value='M'>Mulher</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Passaporte:</td>
+        <td>
+          <input type='text' name='psr_tst' id='psr_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Nome do Pai:</td>
+        <td>
+          <input type='text' name='nme_pai_tst' id='nme_pai_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Nome da Mãe:</td>
+        <td>
+          <input type='text' name='nme_mae_tst' id='nme_mae_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>CEP:</td>
+        <td>
+          <input type='text' name='cep_tst' id='cep_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>UF:</td>
+        <td>
+          <select name='uf_tst' id='uf_tst'>
+            <option value='DF'>DF</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Cidade:</td>
+        <td>
+          <select name='cid_tst' id='cid_tst'>
+            <option value='Brasília'>Brasília</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Setor:</td>
+        <td>
+          <select name='set_tst' id='set_tst'>
+            <option value='Asa Norte'>Asa Norte</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Endereço:</td>
+        <td>
+          <select name='end_tst' id='end_tst'>
+            <option value='108 Norte'>108 Norte</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Complemento:</td>
+        <td>
+          <input type='text' name='com_tst' id='com_tst' maxlength='20'>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td>E-mail:</td>
+        <td>
+          <input type='email' name='eml_tst' id='eml_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Celular:</td>
+        <td>
+          <input type='text' name='cel_tst' id='cel_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td>Telefone Fixo:</td>
+        <td>
+          <input type='text' name='tel_tst' id='tel_tst'>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='3'>
+          <button type='submit'>Adicionar Testemunha</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endblock %}

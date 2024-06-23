@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/incluir_usuario' method='post'>
+    <table>
+      <tr>
+        <td>Usuário:</td>
+        <td>
+          <input type='text' name='nme_usr' id='nme_usr' maxlength='20' required>
+        </td>
+      </tr>
+      <tr>
+        <td>E-mail:</td>
+        <td>
+          <input type='email' name='eml_usr' id='eml_usr' maxlength='50' required>
+        </td>
+      </tr>
+      <tr>
+        <td>Senha Inicial:</td>
+        <td>
+          <input type='password' name='pwd_usr' id='pwd_usr' maxlength='20' required>
+        </td>
+      </tr>
+      <tr>
+        <td>Perfil:</td>
+        <td>
+          <select name='pfl_usr' id='pfl_usr' size='1'>
+            <option value='C'>Usuário Comum</option>
+            <option value='P'>Policial</option>
+            <option value='A'>Administrador</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='3'>
+          <button type='submit'>Incluir Usuário</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}

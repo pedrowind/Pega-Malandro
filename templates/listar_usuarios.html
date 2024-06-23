@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/listar_usuarios' method='post'>
+    <table>
+      <tr>
+        <td>Digite o Nome do Usuário:</td>
+        <td>
+          <input type='text' name='nme_usr' id='nme_usr' maxlength='20'>
+        </td>
+      </tr>
+      <tr>
+        <td>Escolha um Perfil:</td>
+        <td>
+          <select name='pfl_usr' id='pfl_usr' size='1'>
+            <option value='T'>Todos os Perfis</option>
+            <option value='C'>Usuário Comum</option>
+            <option value='P'>Policial</option>
+            <option value='A'>Administrador</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='2'>
+          <button type='submit'>Buscar Usuários</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  {% if lista | length: %}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Usuário</th>
+        <th>E-mail</th>
+        <th>Perfil</th>
+        <th>Opções</th>
+      </tr>
+      {% for usr in lista %}
+        <tr>
+          <td>{{ usr['idt_usr'] }}</td>
+          <td>{{ usr['nme_usr'] }}</td>
+          <td>{{ usr['eml_usr'] }}</td>
+          <td>
+            {% if usr['pfl_usr'] == 'C': %}
+              Usuário Comum
+            {% endif %}
+            
+            {% if usr['pfl_usr'] == 'P': %}
+              Policial
+            {% endif %}
+            
+            {% if usr['pfl_usr'] == 'A': %}
+              Administrador
+            {% endif %}
+          </td>
+          <td>
+            <button type='button' onclick='alterar_usuario("{{ usr["idt_usr"] }}")'>Alterar</button>
+            <button type='button' onclick='excluir_usuario("{{ usr["idt_usr"] }}")'>Excluir</button>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}
+
+{% block script %}
+  <script>
+    function alterar_usuario(idt_usr) {
+      window.location = '/alterar_usuario?idt_usr=' + idt_usr;
+    }
+
+    function excluir_usuario(idt_usr) {
+      window.location = '/excluir_usuario?idt_usr=' + idt_usr;
+    }
+  </script>
+{% endblock %}

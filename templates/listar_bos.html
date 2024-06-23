@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/listar_bos' method='post'>
+    <table>
+      <tr>
+        <td>Digite a Data Ínicio do B.O:</td>
+        <td>
+          <input type='datetime-local' name='dta_ini_bo' id='dta_ini_bo'>
+        </td>
+      </tr>
+      <tr>
+        <td>Digite a Data Fim do B.O:</td>
+        <td>
+          <input type='datetime-local' name='dta_fim_bo' id='dta_fim_bo'>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='2'>
+          <button type='submit'>Buscar B.O's</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  {% if lista | length: %}
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Usuário</th>
+        <th>E-mail</th>
+        <th>Perfil</th>
+        <th>Opções</th>
+      </tr>
+      {% for usr in lista %}
+        <tr>
+          <td>{{ usr['idt_usr'] }}</td>
+          <td>{{ usr['nme_usr'] }}</td>
+          <td>{{ usr['eml_usr'] }}</td>
+          <td>
+            {% if usr['pfl_usr'] == 'C': %}
+              Usuário Comum
+            {% endif %}
+            
+            {% if usr['pfl_usr'] == 'P': %}
+              Policial
+            {% endif %}
+            
+            {% if usr['pfl_usr'] == 'A': %}
+              Administrador
+            {% endif %}
+          </td>
+          <td>
+            <button onclick='alterar_bo("{{ usr["idt_usr"] }}")'>Alterar</button>
+            <button onclick='excluir_bo("{{ usr["idt_usr"] }}")'>Excluir</button>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}
+
+{% block script %}
+  <script>
+    function alterar_bo(id) {
+      window.location = '/alterar_bo?id=' + id;
+    }
+
+    function excluir_bo(id) {
+      window.location = '/excluir_bo?id=' + id;
+    }
+  </script>
+{% endblock %}

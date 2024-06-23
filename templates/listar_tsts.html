@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+  <form action='/listar_tsts' method='post'>
+    {% if lista_tsts | length: %}
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Opções</th>
+          <th style='display: block;'>B.O</th>
+        </tr>
+        {% for tst in lista_tsts %}
+          <tr>
+            <td>
+              <input type='text' name='idt_tst' id='idt_tst' readonly value='{{ tst["idt_tst"] }}' style='width: 24px;'>
+            </td>
+            <td>{{ tst['nme_tst'] }}</td>
+            <td>{{ tst['cpf_tst'] }}</td>
+            <td>
+              <button type='submit'>Escolher Testemunha para o B.O [{{ idt_bo }}]</button>
+            </td>
+            <td style='display: block;'>
+              <input type='text' name='idt_bo' id='idt_bo' readonly value='{{ idt_bo }}' style='width: 24px;'>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+  </form>
+{% endblock %}
+
+{% block msg %}
+  {{ msg }}
+{% endblock %}

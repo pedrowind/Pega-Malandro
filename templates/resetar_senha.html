@@ -1,23 +1,23 @@
 {% extends 'layout.html' %}
 
 {% block conteudo %}
-    <form action='/resetar_senha' method='post'>
-        <table>
-            <tr>
-                <td>Resetar Senha do Usuário</td>
-                <td>
-                    <input type='text' name='usuario' id='usuario'>
-                </td>
-            </tr>
-            <tr>
-                <td colspan='2'>
-                    <button type='submit'>Resetar Senha</button>
-                </td>
-            </tr>
-        </table>
-    </form>
+  <form action='/resetar_senha' method='post'>
+    <table>
+      <tr>
+        <td>Resetar Senha do Usuário:</td>
+        <td>
+          <input type='text' name='usuario' id='usuario'>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='1'>
+          <button type='submit'>Resetar Senha</button>
+        </td>
+      </tr>
+    </table>
+  </form>
 {% endblock %}
 
 {% block msg %}
-    {{ msg }}
+  {{ msg }}
 {% endblock %}
