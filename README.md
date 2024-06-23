@@ -19,7 +19,6 @@ Desenvolvemos uma aplicação para gerenciamento de ocorrencias policiais. Temos
 * **Desenvolvedor** -  [Leonardo Vergutz](https://github.com/LeonardoVergutz)
 * **Desenvolvedor** -  [Pedro Windmoller](https://github.com/pedrowind)
 * **Desenvolvedor** -  [Rafael Marliere](https://github.com/rafields13)
-* **Desenvolvedor** -  [Yago Pio](https://github.com/YagoQPio)
 
 
 ## 🎁 Expressões de gratidão
