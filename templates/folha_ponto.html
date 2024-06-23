@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Ponto</title>
+    <link rel="stylesheet" href="../static/css/folha_ponto.css">
+    <link rel="shortcut icon" type="imagex/png" href="/static/imagens/PegaMalandroLogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="/static/css/header-footer.css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <img src="/static/imagens/PegaMalandroLogo.jpg" alt="icone" />
+          <h1 class="brand-name">Pega Malandro</h1>
+        </div>
+  
+        <nav class="nav-bar">
+          <ul>
+            <li>
+              <a class="nav-link" href="/">Voltar</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="container">
+            <div class="top">
+                <div class="foto">
+                  <label>      
+                    <img src="../static/imagens/Patentes/Coronel/Coronel1.jpg" alt="Foto do Policial">
+                </label>
+                <div class="status-online">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+                </div>
+                <div class="info">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <p id="name">John Doe</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="patente">Patente</label>
+                        <p id="patente">Coronel</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="registro">Número de Registro</label>
+                        <p id="registro">123456</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="delegacia">Mês de Referência</label>
+                        <p id="delegacia">Junho</p>
+                    </div>
+                </div>
+            </div>
+            <div class="legend">
+                <span class="servico">Serviço</span>
+                <span class="folga">Folga</span>
+            </div>
+
+            <table class="calendar">
+                <tr>
+                    <th>D</th>
+                    <th>S</th>
+                    <th>T</th>
+                    <th>Q</th>
+                    <th>Q</th>
+                    <th>S</th>
+                    <th>S</th>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td class="servico">1</td><td class="servico">2</td><td class="folga">3</td><td class="servico">4</td>
+                </tr>
+                <tr>
+                    <td class="folga">5</td><td class="servico">6</td><td class="servico">7</td><td class="folga">8</td><td class="servico">9</td><td class="servico">10</td><td class="servico">11</td>
+                </tr>
+                <tr>
+                    <td class="folga">12</td><td class="servico">13</td><td class="folga">14</td><td class="folga">15</td><td class="servico">16</td><td class="folga">17</td><td class="servico">18</td>
+                </tr>
+                <tr>
+                    <td class="servico">19</td><td class="folga">20</td><td class="servico">21</td><td class="servico">22</td><td class="folga">23</td><td class="servico">24</td><td class="servico">25</td>
+                </tr>
+                <tr>
+                    <td class="folga">26</td><td class="servico">27</td><td class="folga">28</td><td class="servico">29</td><td class="folga">30</td><td class="servico">31</td><td></td>
+                </tr>
+            </table>
+        </div>
+      </main>
+            <div class="buttons">
+                <button type="submit" class="btn-alterar-senha">Bater Ponto</button>
+                <span id="horarioLocal" class="horario">00:00:00</span>
+            </div>
+        </div>
+      </main>
+      <script>
+        function atualizarHorario() {
+            const now = new Date();
+            const horas = String(now.getHours()).padStart(2, '0');
+            const minutos = String(now.getMinutes()).padStart(2, '0');
+            const segundos = String(now.getSeconds()).padStart(2, '0');
+            const horarioFormatado = `${horas}:${minutos}:${segundos}`;
+            document.getElementById('horarioLocal').textContent = horarioFormatado;
+        }
+        
+        setInterval(atualizarHorario, 1000);
+        
+        atualizarHorario();
+        </script>
+        
+    
+      
+      <footer class="footer">
+        <ul>
+          <a href=""><li>Privacy</li></a>
+          <a href=""><li>Terms</li></a>
+          <a href=""><li>Contact</li></a>
+        </ul>
+        <span>Copyright 2024</span>
+      </footer>
+    </body>
+</html>

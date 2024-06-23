@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-size: large;
+    max-width: 100%;
+    width: 97%;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4c4c4c;
+    padding: 10px;
+    color: #fff;
+}
+
+.top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.form-group {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.form-group:nth-child(odd) {
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+p {
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.status-online {
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+
+.tabela-ocorrencias-container {
+    margin-top: 20px;
+    height: 50%;
+    overflow-y: auto;
+}
+
+.tabela-ocorrencias table {
+    width: 100%;
+    font-size: large;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-ocorrencias th,
+.tabela-ocorrencias td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela-ocorrencias th {
+    background-color: #4c4c4c;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: -60px;
+    margin-left: 60px;
+}
+
+button {
+    font-size: large;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button#baterPonto {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#baterPonto:hover {
+    background-color: #0056b3;
+}
+
+.horario {
+    font-size: 18px;
+    margin-left: 20px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-alterar-senha,.btn-alterar-infos {
+    background-color: #4c4c4c;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4c4c4c;
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer span {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group p {
+    margin: 0;
+}
+
+.legend {
+    margin: 20px 0;
+}
+
+.legend .servico {
+    background-color: #0056b3;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.legend .folga {
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.calendar {
+    width: 100%;
+    height: 67%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+}
+
+.servico {
+    background-color: #0056b3;
+    color: white;
+}
+
+.folga {
+    background-color: #ffcc00;
+}
