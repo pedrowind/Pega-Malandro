@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="shortcut icon" type="imagex/png" href="/static/imagens/PegaMalandroLogo.jpg">
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="/static/imagens/PegaMalandroLogo.jpg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,9 +53,22 @@
         </div>
 
         <div class="wrapper">
-          <input type="text" name="username" placeholder="Usuário" required />
-          <input type="password" name="password" placeholder="Senha" required />
+          <input
+            type="text"
+            name="usuario"
+            placeholder="Usuário"
+            id="usuario"
+            required
+          />
+          <input
+            type="password"
+            name="senha"
+            placeholder="Senha"
+            id="senha"
+            required
+          />
         </div>
+        <p class="msg">{{ msg }}</p>
 
         <button type="submit">Login</button>
 
@@ -59,9 +76,16 @@
           <a href="/cadastro">Não tem uma conta? Cadastre-se.</a>
           <a href="/recuperar_senha">Esqueceu a senha?</a>
         </div>
-        
-        <p class='msg'>{{ msg }}</p>
       </form>
-    </div>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <a href=""><li>Privacy</li></a>
+        <a href=""><li>Terms</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+      <span>Copyright 2024</span>
+    </footer>
   </body>
 </html>
